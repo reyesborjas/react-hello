@@ -1,5 +1,7 @@
 import React from "react";
 import { Cards } from "./cards";
+import { Navbar } from "./Navbar";
+import { Titulo } from "./titulo";
 
 function Home() {
 {/*aqui va el navbar
@@ -13,7 +15,7 @@ function Home() {
 
 
 
-	
+
   const cardData = [
     {
       image: "https://via.placeholder.com/150",
@@ -46,6 +48,9 @@ function Home() {
   ];
 
   return (
+   <div><Navbar/>
+   <div className="jumbotron"> <Titulo/></div>
+  
     <div className="container mt-4">
       <div className="row">
         {cardData.map((card, index) => (
@@ -61,6 +66,8 @@ function Home() {
         ))}
       </div>
     </div>
+    </div>
+    
   );
 }
 
